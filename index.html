@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Base Navigation Bar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #04AA6D;
+}
+
+/* Dropdown Container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.dropbtn {
+  font-size: 16px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #04AA6D;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Search box */
+.navbar input[type=text] {
+  margin-left: auto;
+  padding: 6px;
+  border: none;
+  border-radius: 2px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#">Home</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Men</button>
+    <div class="dropdown-content">
+      <a href="#">Shirts</a>
+      <a href="#">Trousers</a>
+      <a href="#">Jackets</a>
+      <a href="#">Shoes</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Women</button>
+    <div class="dropdown-content">
+      <a href="#">Dresses</a>
+      <a href="#">Tops</a>
+      <a href="#">Skirts</a>
+      <a href="#">Heels</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Kids</button>
+    <div class="dropdown-content">
+      <a href="#">Boys' Clothing</a>
+      <a href="#">Girls' Clothing</a>
+      <a href="#">Shoes</a>
+      <a href="#">Accessories</a>
+    </div>
+  </div>
+
+  <a href="#">Location</a>
+  <a href="#">Contact</a>
+  <a href="#">About</a>
+  <a href="#">Setting</a>
+
+  <input type="text" placeholder="Search..">
+</div>
+
+</body>
+</html>
