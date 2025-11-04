@@ -3,59 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Navbar</title>
 <style>
-/* Base Navigation Bar */
+/* NAVBAR BASE STYLES */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .navbar {
   background-color: #333;
-  overflow: hidden;
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
-.navbar a {
-  float: left;
-  display: block;
+/* Links inside navbar */
+.navbar a, .dropbtn {
   color: white;
-  text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
+/* Hover effects */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #04AA6D;
 }
 
-/* Dropdown Container */
+/* DROPDOWN CONTAINER */
 .dropdown {
-  float: left;
-  overflow: hidden;
   position: relative;
+  display: inline-block;
 }
 
-.dropbtn {
-  font-size: 16px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 20px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-/* Dropdown Content (hidden by default) */
+/* DROPDOWN CONTENT (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  background-color: #444;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
   z-index: 1;
 }
 
-/* Dropdown Links */
+/* LINKS INSIDE DROPDOWN */
 .dropdown-content a {
-  float: none;
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -63,16 +60,17 @@
   text-align: left;
 }
 
+/* Hover color inside dropdown */
 .dropdown-content a:hover {
   background-color: #04AA6D;
 }
 
-/* Show the dropdown menu on hover */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Search box */
+/* Search bar on the right */
 .navbar input[type=text] {
   margin-left: auto;
   padding: 6px;
@@ -83,19 +81,22 @@
 </head>
 <body>
 
+<!-- NAVBAR START -->
 <div class="navbar">
-  <a href="#home">Home</a>
+  <a href="#">Home</a>
 
+  <!-- Men dropdown -->
   <div class="dropdown">
     <button class="dropbtn">Men</button>
     <div class="dropdown-content">
-      <a href="#shirt">Shirts</a>
-      <a href="#trousers">Trousers</a>
+      <a href="#">T-Shirts</a>
+      <a href="#">Jeans</a>
       <a href="#">Jackets</a>
       <a href="#">Shoes</a>
     </div>
   </div>
 
+  <!-- Women dropdown -->
   <div class="dropdown">
     <button class="dropbtn">Women</button>
     <div class="dropdown-content">
@@ -106,12 +107,13 @@
     </div>
   </div>
 
+  <!-- Kids dropdown -->
   <div class="dropdown">
     <button class="dropbtn">Kids</button>
     <div class="dropdown-content">
-      <a href="#">Boys' Clothing</a>
-      <a href="#">Girls' Clothing</a>
-      <a href="#">Shoes</a>
+      <a href="#">Boys</a>
+      <a href="#">Girls</a>
+      <a href="#">Baby</a>
       <a href="#">Accessories</a>
     </div>
   </div>
@@ -123,6 +125,7 @@
 
   <input type="text" placeholder="Search..">
 </div>
+<!-- NAVBAR END -->
 
 </body>
 </html>
